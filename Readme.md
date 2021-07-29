@@ -13,3 +13,17 @@
 
 > 路由中间件
 - main->middleware->defs(message, err)->handlers->dbops->response
+
+
+*****
+> **stream**
+> 
+> limit: 防止请求过多，造成server链接数消耗完,ram消耗完就会crash。
+> 流控制算法实现：如使用一个bucket：有20个token，request进来使用一个token，repsonse后返回占用的token；以此实现流控。
+>
+
+****
+> **scheduler**
+> 实现异步操作(诸如延迟删除等)
+> 
+> 经由一个channel实现生产者/消费者的通信
